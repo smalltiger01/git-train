@@ -1,1 +1,1 @@
-alert("specialgood2")
+alert("3")
