@@ -1,0 +1,1 @@
+alert("specialgood2")
