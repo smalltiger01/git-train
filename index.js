@@ -1,1 +1,1 @@
-console.log(bool3)
+console.log(bool12)
