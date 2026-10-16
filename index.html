@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git 协作训练任务板</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="src/app.js" defer></script>
+  </head>
+  <body>
+    <main class="board">
+      <p class="eyebrow">Git Collaboration Lab</p>
+      <h1>协作任务板</h1>
+      <p class="intro">这个小应用用于观察功能如何从分支经过 PR 进入主分支。</p>
+
+      <form id="task-form" class="task-form">
+        <label for="task-title">新任务</label>
+        <div class="task-form__controls">
+          <input id="task-title" name="title" placeholder="例如：审核任务优先级 PR" required />
+          <button type="submit">添加</button>
+        </div>
+      </form>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    </main>
+  </body>
+</html>
