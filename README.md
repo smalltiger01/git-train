@@ -2,7 +2,33 @@
 
 这是一个专门用来练习 **分支、提交、Pull Request、审核、合并和同步主分支** 的小项目。
 
-项目本身是一张无需安装依赖的任务清单：直接用浏览器打开 `index.html` 即可运行。
+项目本身是一张无需第三方依赖的任务清单，使用 Node.js 内置测试运行器和一个轻量开发服务器。
+
+## 项目结构
+
+```text
+.
+├── .github/workflows/ci.yml   # GitHub Actions 自动检查
+├── scripts/dev-server.js      # 本地开发服务器
+├── src/app.js                 # 浏览器界面逻辑
+├── src/task-service.js        # 可独立测试的任务业务逻辑
+├── test/task-service.test.js  # 单元测试
+├── index.html
+├── styles.css
+└── package.json               # 项目脚本和 Node 版本要求
+```
+
+## 本地运行
+
+需要 Node.js 20 或更高版本。在仓库目录执行：
+
+```bash
+npm run check
+npm test
+npm run dev
+```
+
+然后访问 <http://127.0.0.1:4173>。修改会通过 Pull Request 进入 `main`，GitHub Actions 会在 PR 中自动执行语法检查和单元测试。
 
 ## 仓库角色
 
