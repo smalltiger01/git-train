@@ -1,6 +1,7 @@
 import {
   addTask,
   getTaskSummary,
+  removeTask,
   setTaskDone,
 } from "./task-service.js";
 
@@ -31,7 +32,18 @@ function renderTasks() {
 
       const title = document.createElement("span");
       title.textContent = task.title;
-      item.append(checkbox, title);
+
+      const deleteButton = document.createElement("button");
+      deleteButton.type = "button";
+      deleteButton.className = "task__delete";
+      deleteButton.textContent = "删除";
+      deleteButton.setAttribute("aria-label", `删除任务：${task.title}`);
+      deleteButton.addEventListener("click", () => {
+        tasks = removeTask(tasks, task.id);
+        renderTasks();
+      });
+
+      item.append(checkbox, title, deleteButton);
       return item;
     }),
   );

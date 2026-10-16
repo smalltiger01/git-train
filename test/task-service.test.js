@@ -5,6 +5,7 @@ import {
   addTask,
   createTask,
   getTaskSummary,
+  removeTask,
   setTaskDone,
 } from "../src/task-service.js";
 
@@ -39,6 +40,18 @@ test("setTaskDone updates only the matching task", () => {
     { id: 1, title: "任务一", done: false },
     { id: 2, title: "任务二", done: true },
   ]);
+});
+
+test("removeTask removes only the matching task without mutating the original", () => {
+  const tasks = [
+    { id: 1, title: "保留任务", done: false },
+    { id: 2, title: "删除任务", done: true },
+  ];
+
+  const updated = removeTask(tasks, 2);
+
+  assert.equal(tasks.length, 2);
+  assert.deepEqual(updated, [{ id: 1, title: "保留任务", done: false }]);
 });
 
 test("getTaskSummary reports total, completed, and remaining tasks", () => {

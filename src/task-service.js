@@ -31,6 +31,10 @@ export function setTaskDone(tasks, taskId, done) {
   );
 }
 
+export function removeTask(tasks, taskId) {
+  return tasks.filter((task) => task.id !== taskId);
+}
+
 export function getTaskSummary(tasks) {
   const completed = tasks.filter((task) => task.done).length;
 
