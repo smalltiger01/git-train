@@ -55,6 +55,7 @@ h1 {
 }
 
 input,
+select,
 button {
   min-height: 44px;
   border-radius: 12px;
@@ -65,6 +66,13 @@ input {
   flex: 1;
   border: 1px solid #ccd5e3;
   padding: 0 14px;
+}
+
+select {
+  border: 1px solid #ccd5e3;
+  padding: 0 10px;
+  color: #33415c;
+  background: white;
 }
 
 button {
@@ -96,4 +104,38 @@ button {
 .task--done span {
   color: #8a96a8;
   text-decoration: line-through;
+}
+
+.task > span {
+  flex: 1;
+}
+
+.priority {
+  min-width: 32px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.priority--high {
+  color: #a11c2f;
+  background: #ffe3e8;
+}
+
+.priority--medium {
+  color: #8a5700;
+  background: #fff0c2;
+}
+
+.priority--low {
+  color: #176348;
+  background: #dff7eb;
+}
+
+@media (max-width: 560px) {
+  .task-form__controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
