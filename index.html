@@ -17,6 +17,11 @@
         <label for="task-title">新任务</label>
         <div class="task-form__controls">
           <input id="task-title" name="title" placeholder="例如：审核任务优先级 PR" required />
+          <select id="task-priority" name="priority" aria-label="任务优先级">
+            <option value="high">高优先级</option>
+            <option value="medium" selected>中优先级</option>
+            <option value="low">低优先级</option>
+          </select>
           <button type="submit">添加</button>
         </div>
       </form>
