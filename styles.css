@@ -103,3 +103,19 @@ button {
   color: #8a96a8;
   text-decoration: line-through;
 }
+
+.task > span {
+  flex: 1;
+}
+
+.task__delete {
+  min-height: 34px;
+  padding: 0 12px;
+  color: #a11c2f;
+  background: #ffe3e8;
+  font-size: 0.85rem;
+}
+
+.task__delete:hover {
+  background: #ffcbd5;
+}
