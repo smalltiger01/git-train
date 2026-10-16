@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git 协作训练任务板</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="src/app.js" defer></script>
+    <script src="src/app.js" type="module"></script>
   </head>
   <body>
     <main class="board">
@@ -21,6 +21,7 @@
         </div>
       </form>
 
+      <p id="task-summary" class="task-summary" aria-live="polite"></p>
       <ul id="task-list" class="task-list" aria-live="polite"></ul>
     </main>
   </body>

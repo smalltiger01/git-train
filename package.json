@@ -1,0 +1,15 @@
+{
+  "name": "git-collaboration-task-board",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A small task board used to practice Git branches, pull requests, reviews, and merges.",
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "test": "node --test",
+    "check": "node --check src/app.js && node --check src/task-service.js && node --check scripts/dev-server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
